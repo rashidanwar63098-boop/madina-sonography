@@ -8,8 +8,8 @@ from datetime import datetime
 app = Flask(__name__)
 claude = Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY"))
 twilio_client = TwilioClient(
-    os.environ.get("TWILIO_ACCOUNT_SID"),
-    os.environ.get("TWILIO_AUTH_TOKEN")
+    username=os.environ.get("TWILIO_ACCOUNT_SID"),
+    password=os.environ.get("TWILIO_AUTH_TOKEN")
 )
 TWILIO_NUMBER = os.environ.get("TWILIO_PHONE_NUMBER")
 
